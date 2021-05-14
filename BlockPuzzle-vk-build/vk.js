@@ -7,7 +7,7 @@
 
 
 function publish(level_id){
-	VK.api("wall.post", {"message": 'Я собрал ' + level_id + ' паззлов в игре Block Puzzle! А сможешь ли ты?', "attachments" : "https://vk.com/app7851988_649233139", "v":"5.73"}, function (data) {
+	VK.api("wall.post", {"message": 'Я собрал ' + level_id + ' паззлов в игре Block Puzzle! А сможешь ли ты?', "attachments" : "https://vk.com/app7848715", "v":"5.73"}, function (data) {
 		//;
 	});
 };
