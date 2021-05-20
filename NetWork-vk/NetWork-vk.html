@@ -8,12 +8,16 @@
 	<style type='text/css'>
 
 		body {
+			background-image: url("splash.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center bottom;
 			touch-action: none;
 			margin: 0;
 			border: 0 none;
 			padding: 0;
 			text-align: center;
-			background-color: black;
+			background-color: white;
 		}
 
 		#canvas {
@@ -119,7 +123,7 @@
 <script type="text/javascript" src="vk.js" charset="utf-8"></script>
 <script>
   window.addEventListener('load', function() {
- 
+ 	var ad_result = null
     var user_id = null;   // user's id
     var app_id = 7851988;  // your app's id
  	
@@ -129,13 +133,14 @@
  
     function onAdsReady(adman) {
       adman.onStarted(function () {});
-      adman.onCompleted(function() {});          
+      adman.onCompleted(function() {ad_result = "rewarded"});          
       adman.onSkipped(function() {});          
       adman.onClicked(function() {});
       adman.start('preroll');
     };
 	
 	window.onAdsReady = onAdsReady
+	window.onAdsCompleted = onAdsCompleted
 	
     function onNoAds() {};
 	
@@ -167,7 +172,7 @@
 	<script type='text/javascript' src='NetWork-vk.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"NetWork-vk","experimentalVK":false,"fileSizes":{"NetWork-vk.pck":623040,"NetWork-vk.wasm":12649798},"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"NetWork-vk","experimentalVK":false,"fileSizes":{"NetWork-vk.pck":960656,"NetWork-vk.wasm":18105040},"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {
