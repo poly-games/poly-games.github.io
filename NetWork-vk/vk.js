@@ -16,3 +16,7 @@ function publish(level_id){
 function progress(level_id){
 	VK.api("secure.addAppEvent", {"activity_id":"1", "value":level_id})
 }
+
+function show_group(){
+	window.open('https://vk.com/poly_games');
+}
